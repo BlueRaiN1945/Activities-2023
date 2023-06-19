@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "jsx": "react-jsx",
+        "strict": true,
+        "isolatedModules": true,
+        "target": "ESNext",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "paths": {
+            "@/*": ["./resources/js/*"]
+        },
+        "typeRoots" : ["./node_modules/@types", "./types"], 
+        "types": ["node", "bonjour"]
+    },
+    "include": ["resources/js/**/*.ts", "resources/js/**/*.tsx", "resources/js/**/*.d.ts"]
+}
+//The "typeRoots" option tells TypeScript to include type definitions from the specified folders. The "types" option tells TypeScript to only include the specified types from those folders. In this case, it's being set to include 'node' and 'bonjour'. If you need to include more global types, you can add them to the "types" array.
+
+//If the 'bonjour' error persists, you may have to install the type definitions for 'bonjour' with npm (npm install --save-dev @types/bonjour), or if they don't exist, you may have to declare the module manually in a .d.ts file in your project (declare module 'bonjour';).
